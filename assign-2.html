@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700&display=swap" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+  *{
+      margin: 0;
+      padding: 0;
+    }
+body{
+    font-family: "Roboto", sans-serif;
+}
+    .main-sec{
+      position: relative;
+      display: block;
+      width:90%;
+      margin: 0 auto;
+      background-color:transparent;
+    }
+      .main-subsec-1,.main-subsec-1a{
+        position: relative;
+      display:flex;
+      flex-direction: row;
+      width:100%;
+      background-color:transparent;
+      gap: 10px;
+      }
+      .main-subsec-1a{
+        gap: 10px;
+        padding-top: 50px;
+      }
+      .subsec-1,.subsec-2,.subsec-3,.new-sec{
+        position: relative;
+      display: block;
+      margin: 0 auto;
+      background-color:transparent;
+/*      width:100%;*/
+      }
+      .new-sec{
+        width: 100%;
+      }
+      .subsec-1{
+        width:50%;
+      }
+      .subsec-2{
+        width:30%;
+      }
+      .subsec-3{
+        width:20%;
+        display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+      }
+
+
+a{
+    color: #ff4500;
+    font-weight: bold;
+}
+      /*Pyramidsec*/
+
+      .main-subsec-card-1{
+      border: 1px solid lightgrey; /* Light grey border */
+      border-radius: 5px; /* Rounded corners */
+      background-color: #f8f8f8; /* Off-white background */
+      padding: 25px;
+    }
+    .main-subsec-smartlyt-1,.main-subsec-smartlyt-2{
+    display: flex; /* Aligns the squares horizontally */
+    gap: 10px; /* Spacing between each number square */
+    align-items: center;
+    padding-top: 10px;
+}
+
+.number-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcff1; /* Light pink background */
+    border: 1px solid lightgrey; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    z-index: 1;
+}
+
+.main-subsec-smartlyt-1::before {
+    content: "";
+    position: absolute;
+    top: 17.5%;
+    left: 50%;
+    height: 2px;
+    background-color: lightgrey;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 96%;
+}
+
+.number-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.number-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcff1!important; /* Light pink background */
+    border: 1px solid lightgrey; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    z-index: 1;
+}
+.number-text {
+    margin-top: 10px; /* Space between the number square and text */
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+.pyramid-sec {
+    display: flex;
+    flex-direction: column; /* Stack pyramid containers vertically */
+    gap: 20px; /* Space between each pyramid container */
+    padding-top: 50px;
+}
+
+.pyramid-container {
+    display: flex; /* Align pyramid and text side by side */
+    align-items: center; /* Center vertically */
+}
+
+.pyramid {
+    position: relative;
+    width: 0;
+    height:0;
+    border-left: 30px solid transparent; /* Left side of the triangle */
+    border-right: 30px solid transparent; /* Right side of the triangle */
+    border-bottom: 100px solid #3498db; /* Base color of the triangle */
+    width:100px;
+}
+
+.pyramid-1 {
+    border-left-width: 40px; /* Width for pyramid 1 */
+    border-right-width: 45px; /* Width for pyramid 1 */
+    border-bottom-color: #ffcff1; /* Color for pyramid 1 */
+    width:0;
+    margin-left: 108px;
+    margin-bottom:-16px;
+}
+
+.pyramid-2 {
+    border-left-width: 40px; /* Width for pyramid 2 */
+    border-right-width: 40px; /* Width for pyramid 2 */
+    border-bottom-color: #ffcff1; /* Color for pyramid 2 */
+    width:85px;
+    margin-left: 68px;
+    margin-bottom:-15px;
+}
+
+.pyramid-3 {
+    border-left-width: 40px; /* Width for pyramid 3 */
+    border-right-width: 40px; /* Width for pyramid 3 */
+    border-bottom-color: #ffcff1; /* Color for pyramid 3 */
+    width:165px;
+    margin-left: 29px;
+}
+
+.number {
+    position: absolute;
+    color: #000; /* Number color */
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    top: 50px; /* Adjust for vertical centering of the number */
+    font-weight:bold;
+}
+
+.text-section {
+    
+    flex-grow: 1; /* Allow the text section to take remaining space */
+    width:50%;
+}
+
+.text {
+    margin: 0 auto; /* Remove default margin for text */
+    padding-top:10px;
+}
+
+hr {
+    border: none; /* Remove default border */
+    border-bottom: 1px solid #dcdcdc; /* Customize line style */
+    margin: 10px 0; /* Space above and below the line */
+    position: relative;
+    top:35px;
+}
+
+
+/* General button styling */
+.primary-button, .secondary-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Primary Button */
+.primary-button {
+    color: #fff; /* Default text color */
+    border: 2px solid #ff4500; /* Border color */
+    background-color: #ff4500; /* Transparent background */
+}
+
+.primary-button:hover {
+    background-color: #fff; /* White background on hover */
+    color:#ff4500; /* Black text color on hover */
+    border-color: #ff4500; /* Keep the border color on hover */
+}
+
+/* Secondary Button */
+.secondary-button {
+    color: #ff4500; /* Text color */
+    border: 2px solid #ff4500; /* Border color */
+    background-color: #fff; /* White background */
+}
+
+.secondary-button:hover {
+    background-color: #ff4500; /* Orange background on hover */
+    color: #fff; /* White text color on hover */
+    border-color: #ff4500; /* Keep the border color on hover */
+}
+
+.img-1{
+    position: relative; /* Needed for the pseudo-element positioning */
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    max-width: 100%;
+}
+.img-1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%; /* Start halfway down */
+    height: 50%; /* Extend to the bottom */
+    width: 2px; /* Border thickness */
+    background-color: #ff4500; /* Border color */
+}
+
+.head-1 {
+    background: linear-gradient(90deg, #ff66ff, #000); /* Gradient colors with darker shade on the right */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes the gradient show up as text color */
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.head-2{
+    color: #ff66ff;
+}
+.head-3{
+    padding-bottom:10px;
+}
+ /*mediaqueries start*/
+    @media(max-width: 1200px){
+      .main-subsec-1{
+        
+      }
+    }
+    @media(max-width: 992px){
+      .main-subsec-1{
+        display: inline-grid;
+      }
+      .subsec-1,.subsec-2,.subsec-3{
+        width:100%;
+      }
+      .main-subsec-smartlyt-2{
+        padding-top: 10px;
+        width:100%;
+        display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+    align-items: center;
+      }
+    }
+    @media(max-width: 768px){
+      .main-subsec-1{
+        display: inline-grid;
+      }
+      
+    }
+    @media(max-width: 576px){
+      .main-subsec-1{
+        display: inline-grid;
+      }
+      .pyramid-1{
+        margin-left:80px;
+      }
+      .pyramid-2{
+        margin-left:40px;
+       
+      }
+      .pyramid-3{
+        margin-left:0px;
+        width:185px;
+      }
+      hr {
+    top:27px;
+}
+.new-sec{
+    text-align: center;
+}
+.main-subsec-1a{
+    display:inline-grid;
+}
+.main-subsec-smartlyt-2{
+    display: inline-grid;
+    padding-bottom: 50px;
+}
+.subsec-3{
+    padding-bottom: 100px;
+}
+    }
+  </style>
+
+    
+</head>
+<body oncontextmenu="return false;">
+<div class="main-sec">
+
+    <div class="main-subsec-1">
+
+    <div class="subsec-1">
+        <div class="new-sec">
+        <h1>This is a theme preview</h1>
+        <p>Here's an example of body text. You change its font and the color. <a href="#">Your accent color will be used for links</a>. It will also be used for layouts and buttons.</p>
+    </div>
+        <div class="main-subsec-1a">
+            <div class="main-subsec-card-1">
+          <p>This is a smart layout: It acts as a textbox</p> 
+        </div>
+        <div class="main-subsec-card-1">
+          <p>You can get these by typing smart</p>
+        </div>
+        </div>
+        <div class="main-subsec-1a">
+            <div class="main-subsec-smartlyt-2">
+         <a href="#" class="primary-button">Primary Button</a>
+        <a href="#" class="secondary-button">Secondary Button</a>
+      </div>
+        </div>
+    </div>
+    <div class="subsec-3">
+        <img src="mav.jpg" class="img-1" />
+    </div>
+    </div>
+</div>
+<script type="text/javascript">
+  document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
+                alert('not allowed');
+            }
+            return false;
+    };
+</script>
+</body>
+</html>
